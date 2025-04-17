@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Different Layouts Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Fixed Layout */
+    .fixed-layout {
+      width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    /* Fluid Layout */
+    .fluid-layout {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #e1e1e1;
+    }
+
+    /* Responsive Layout */
+    .responsive-layout {
+      width: 100%;
+      background-color: #ccc;
+      padding: 20px;
+    }
+
+    .responsive-layout h2 {
+      text-align: center;
+    }
+
+    /* Grid Layout */
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    /* Flexbox Layout */
+    .flexbox-layout {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f3f3f3;
+      padding: 20px;
+    }
+
+    .flexbox-item {
+      background-color: #fff;
+      width: 30%;
+      padding: 20px;
+    }
+
+    /* Multi-Column Layout */
+    .multi-column-layout {
+      column-count: 3;
+      column-gap: 20px;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    /* Sidebar Layout */
+    .sidebar-layout {
+      display: flex;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #e1e1e1;
+      padding: 20px;
+    }
+
+    .main-content {
+      flex: 3;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    /* Card Layout */
+    .card-layout {
+      display: inline-block;
+      width: 30%;
+      background-color: #f3f3f3;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Parallax Layout */
+    .parallax-layout {
+      background-image: url('https://via.placeholder.com/1500x500');
+      background-attachment: fixed;
+      background-size: cover;
+      height: 400px;
+      position: relative;
+    }
+
+    .parallax-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Layout -->
+  <section class="fixed-layout">
+    <h2>Fixed Layout</h2>
+    <p>This section has a fixed width of 1000px. The content inside it will remain fixed in size even if you resize the window.</p>
+  </section>
+
+  <!-- Fluid Layout -->
+  <section class="fluid-layout">
+    <h2>Fluid Layout</h2>
+    <p>This section takes up 80% of the screen width and adjusts based on the viewport size. As you resize the window, the content will scale proportionally.</p>
+  </section>
+
+  <!-- Responsive Layout -->
+  <section class="responsive-layout">
+    <h2>Responsive Layout</h2>
+    <p>This layout adjusts the width based on the screen size. It starts at 100% width and shrinks when the screen is smaller than a certain breakpoint.</p>
+  </section>
+
+  <!-- Grid Layout -->
+  <section class="grid-layout">
+    <div>
+      <h2>Grid Layout</h2>
+      <p>This layout uses CSS Grid with two columns. The first column will take up 1 fraction of space, and the second column will take up 3 fractions.</p>
+    </div>
+    <div>
+      <h3>Grid Column 1</h3>
+      <p>Grid item 1: Small sidebar.</p>
+    </div>
+    <div>
+      <h3>Grid Column 2</h3>
+      <p>Grid item 2: Main content area.</p>
+    </div>
+  </section>
+
+  <!-- Flexbox Layout -->
+  <section class="flexbox-layout">
+    <div class="flexbox-item">
+      <h3>Item 1</h3>
+      <p>This is one flexbox item.</p>
+    </div>
+    <div class="flexbox-item">
+      <h3>Item 2</h3>
+      <p>This is another flexbox item.</p>
+    </div>
+    <div class="flexbox-item">
+      <h3>Item 3</h3>
+      <p>This is the third flexbox item.</p>
+    </div>
+  </section>
+
+  <!-- Multi-Column Layout -->
+  <section class="multi-column-layout">
+    <h2>Multi-Column Layout</h2>
+    <p>This content is divided into three columns. As the window resizes, the columns will adjust to fit the available space.</p>
+    <p>Column 1: This is the first column.</p>
+    <p>Column 2: This is the second column.</p>
+    <p>Column 3: This is the third column.</p>
+  </section>
+
+  <!-- Sidebar Layout -->
+  <section class="sidebar-layout">
+    <div class="sidebar">
+      <img src="C_programming.jpeg" alt="C-Programming" width="250" height="200">
+            <h3>C Programming(Beginner's Course)</h3>
+            <p>Price: <del>Rs:200</del> Free</p>
+            <button type="button">Get Started</button><br><br>
+            <hr>
+    </div>
+    <div class="main-content">
+      <p>"Master the basics of programming with our 'C Programming (Beginner's Course).' <br>
+        Designed for beginners, this course introduces key concepts such as variables, <br>
+        data types, operators, control structures, loops, functions, arrays, and pointers. <br>
+        Learn how to write, debug, and optimize C programs while building a solid foundation <br>
+        for advanced coding techniques. With its influence on modern programming languages <br>
+        like C++, Java, and Python, C is a vital stepping stone for aspiring developers. By the <br>
+        end of this course, you’ll be equipped with the skills to solve problems and write <br>
+        efficient code with confidence.<br>
+    </p>
+    <hr>
+    </div>
+  </section>
+
+  <!-- Card Layout -->
+  <section class="card-layout">
+    <h3>Card 1</h3>
+    <p>This is card content.</p>
+  </section>
+  <section class="card-layout">
+    <h3>Card 2</h3>
+    <p>This is another card content.</p>
+  </section>
+  <section class="card-layout">
+    <h3>Card 3</h3>
+    <p>This is yet another card content.</p>
+  </section>
+
+  <!-- Parallax Layout -->
+  <section class="parallax-layout">
+    <div class="parallax-content">
+      <h2>Parallax Scrolling</h2>
+      <p>The background scrolls at a different speed than the content.</p>
+    </div>
+  </section>
+
+</body>
+</html>
